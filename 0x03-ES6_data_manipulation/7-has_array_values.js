@@ -1,6 +1,11 @@
-function hasValuesFromArray(set, array) {
-  // Check if all elements in the array exist within the set
-  return array.every(element => set.has(element));
-}
+const hasValuesFromArray = (set, array) => {
+  for (const item of array) {
+    if (!set.has(item)) {
+      return false;
+    }
+  }
+
+  return true;
+};
 
 export default hasValuesFromArray;
